@@ -1,4 +1,4 @@
-local F = '__factorissimo-2-notnotmelon__';
+local F = '__factorissimo-2-reforked__';
 local alt_graphics = settings.startup['Factorissimo2-alt-graphics'].value and '-alt' or ''
 require('circuit-connector-sprites')
 

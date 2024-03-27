@@ -16,7 +16,7 @@ Date: 2022.12.9
 Version: 1.2.1
 Date: 2022.12.9
   Info:
-    - Fixed a crash with SE https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/638a256cb94c53001f98940f
+    - Fixed a crash with SE https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/638a256cb94c53001f98940f
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2022.11.30
@@ -26,17 +26,17 @@ Date: 2022.11.30
 Version: 1.1.27
 Date: 2022.11.22
   Info:
-    - Fixed chest connections ignoring bars in some cases https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/637aa5d3c2757b81f497a4de
+    - Fixed chest connections ignoring bars in some cases https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/637aa5d3c2757b81f497a4de
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.26
 Date: 2022.11.12
   Info:
-    - Fixed issues with chest connections not stacking items properly https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/63704be93c80dcd14d7abb29
+    - Fixed issues with chest connections not stacking items properly https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/63704be93c80dcd14d7abb29
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.25
 Date: 2022.11.12
   Info:
-    - Added soft dependancy on Krastorio https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/636fd426f40a0a5fafbdaa4e
+    - Added soft dependancy on Krastorio https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/636fd426f40a0a5fafbdaa4e
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.24
 Date: 2022.11.11
@@ -46,17 +46,17 @@ Date: 2022.11.11
 Version: 1.1.23
 Date: 2022.11.11
   Info:
-    - Fixed issue when SHIFT+Clicking factory power poles. https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/6320a625f5d6c3baf18b821e
+    - Fixed issue when SHIFT+Clicking factory power poles. https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/6320a625f5d6c3baf18b821e
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.22
 Date: 2022.11.11
   Info:
-    - Fixed rare issue with 1.1.16 migration file https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/6320aa69717dbe0f313c4786
+    - Fixed rare issue with 1.1.16 migration file https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/6320aa69717dbe0f313c4786
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.21
 Date: 2022.11.10
   Info:
-    - Fixed item-with-tags getting tags reverted when moving through a chest connection https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/636ca225ad2206759f389838
+    - Fixed item-with-tags getting tags reverted when moving through a chest connection https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/636ca225ad2206759f389838
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.20
 Date: 2022.8.17
@@ -241,7 +241,7 @@ Version: 1.0.9
 Date: 2022.7.15
   Info:
     - Fixed a crash when creating a blueprint without any entities
-    - Changed belt spilling mechanics  https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/62d18f8d8dcfa2a515e77f2a
+    - Changed belt spilling mechanics  https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/62d18f8d8dcfa2a515e77f2a
     - You can now blueprint connection settings
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.8
@@ -252,10 +252,10 @@ Date: 2022.7.15
 Version: 1.0.7
 Date: 2022.7.14
   Info:
-    - priority electric pole mechanics were removed  https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/62ce7014bb9d8bc591641649
+    - priority electric pole mechanics were removed  https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/62ce7014bb9d8bc591641649
     - blueprinting system was improved (still more work to do)
-    - Fixed https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/62d02ea6c3132d49100acef7
-    - Fixed https://mods.factorio.com/mod/factorissimo-2-notnotmelon/discussion/62d0762d0731c7acf8048c54
+    - Fixed https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/62d02ea6c3132d49100acef7
+    - Fixed https://mods.factorio.com/mod/factorissimo-2-reforked/discussion/62d0762d0731c7acf8048c54
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.6
 Date: 2022.7.13

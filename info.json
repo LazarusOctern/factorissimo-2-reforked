@@ -5,5 +5,5 @@
   "author": "MagmaMcFry, notnotmelon, LazarusOctern",
   "description": "A fork of notnotmelons Factorissimo 2 focused fixing surface generation for other types of factories.",
   "factorio_version": "1.1",
-  "dependencies": ["base", "! Factorissimo2","! factorissimo-2-notnotmelon", "(?) Bio_Industries", "(?) power-grid-comb", "(?) EfficientSmelting", "(?) Krastorio2", "(?) PickerDollies", "(?) advanced_fluid_handling_for_py"]
+  "dependencies": ["base", "! Factorissimo2","! factorissimo-2-reforked", "(?) Bio_Industries", "(?) power-grid-comb", "(?) EfficientSmelting", "(?) Krastorio2", "(?) PickerDollies", "(?) advanced_fluid_handling_for_py"]
 }

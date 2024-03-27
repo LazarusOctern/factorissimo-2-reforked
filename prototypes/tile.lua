@@ -1,4 +1,4 @@
-local F = '__factorissimo-2-notnotmelon__'
+local F = '__factorissimo-2-reforked__'
 alien_biomes_priority_tiles = alien_biomes_priority_tiles or {}
 local alt_graphics = settings.startup['Factorissimo2-alt-graphics'].value
 
