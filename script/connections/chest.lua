@@ -103,7 +103,7 @@ Chest.adjust = function(conn, positive)
 	end
 end
 
-local basic_item_types = {['item'] = true, ['capsule'] = true, ['gun'] = true, ['rail-planner'] = true, ['module'] = true}
+local basic_item_types = {['item'] = true, ['capsule'] = true, ['gun'] = true, ['rail-planner'] = true, ['module'] = true, ['tool'] = true}
 local function check_for_basic_item(item)
 	local items_with_metadata = global.items_with_metadata
 	if not items_with_metadata then
@@ -118,25 +118,63 @@ local function check_for_basic_item(item)
 	return not items_with_metadata[item]
 end
 
+local function check_for_durability(item, input_inv)
+	local durability_before_remove = input_inv.find_item_stack(item).durability
+	return durability_before_remove ~= 1 and durability_before_remove ~= nil
+end
+
+local function move_basic_item_without_duarbility(item, count, input_inv, output_inv)
+	local inserted_count = output_inv.insert{name = item, count = count}
+	if inserted_count == 0 then
+		return
+	end
+
+	input_inv.remove{name = item, count = inserted_count}
+end
+
+local function move_basic_item_with_durability(item, count, input_inv, output_inv)
+	-- preserve any durability that is not 100% after moving items
+	local inserted_count = output_inv.insert{name = item, count = count}
+	if inserted_count == 0 then
+		return
+	end
+
+	local durability_before_remove = input_inv.find_item_stack(item).durability
+	input_inv.remove{name = item, count = inserted_count}
+	local stack_after_remove = input_inv.find_item_stack(item)
+	if not stack_after_remove then
+		output_inv.find_item_stack(item).durability = durability_before_remove
+	else
+		local durability_after_remove = stack_after_remove.durability
+		if durability_after_remove ~= durability_before_remove then
+			output_inv.find_item_stack(item).durability = durability_before_remove
+		end
+	end
+end
+
+local function move_advanced_item(item, count, input_inv, output_inv)
+	-- advanced item being transfered, need to preserve tags, durablity, ect
+	-- not safe to "split" the stack here, may result in some item sloshing
+	while count > 0 do
+		local stack = input_inv.find_item_stack(item)
+		local empty_slot, i = output_inv.find_empty_stack(item)
+		if not stack or not empty_slot then break end
+		if output_inv.supports_bar() and output_inv.get_bar() == i then break end
+		if not stack.swap_stack(empty_slot) then break end
+		count = count - stack.count
+	end
+	output_inv.sort_and_merge()
+end
+
 local function move_item(item, count, input_inv, output_inv)
 	if check_for_basic_item(item) then
-		-- basic item being transfered
-		local inserted_count = output_inv.insert{name = item, count = count}
-		if inserted_count > 0 then
-			input_inv.remove{name = item, count = inserted_count}
+		if check_for_durability(item, input_inv) then
+			move_basic_item_with_durability(item, count, input_inv, output_inv)
+		else
+			move_basic_item_without_duarbility(item, count, input_inv, output_inv)
 		end
 	else
-		-- advanced item being transfered, need to preserve tags, durablity, ect
-		-- not safe to "split" the stack here, may result in some item sloshing
-		while count > 0 do
-			local stack = input_inv.find_item_stack(item)
-			local empty_slot, i = output_inv.find_empty_stack(item)
-			if not stack or not empty_slot then break end
-			if output_inv.supports_bar() and output_inv.get_bar() == i then break end
-			if not stack.swap_stack(empty_slot) then break end
-			count = count - stack.count
-		end
-		output_inv.sort_and_merge()
+		move_advanced_item(item, count, input_inv, output_inv)
 	end
 end
 
